@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Content/css")" rel="stylesheet" type="text/css" />
+    <link href="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Content/themes/base/css")" rel="stylesheet" type="text/css" />
+    <script src="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Scripts/js")"></script>
+    
+    @*load all our js files*@
+    @using ReleaseIt.Web.MVC.Bundling
+    @Html.JsBundle("~/js/app")
+
+</head>
+<body>
+    <div id="header">
+        @Html.Partial("_Header")
+    </div>
+    <div id="main">s
+        @RenderBody()
+    </div>
+    <div id="footer">
+        @Html.Partial("_Footer")
+    </div>
+    <div id="errorPanel">
+        @Html.Partial("_ErrorPanel")
+    </div>
+    <div id="logPanel" style="visibility: hidden;">
+        <!-- write log messages at runtime to this panel -->
+    </div>
+</body>
+
+    <!-- load all the pages (templates) here -->
+    @Html.Partial("PagesLayouts/_MainPageLayout")
+
+    <!-- load all the templates here -->
+    @Html.Partial("Templates/_AddReleaseFormTemplate")
+    @Html.Partial("Templates/_ReleasesListTemplate")
+
+
+     @*Finally: page load function per page*@
+    @RenderSection("PageLoadJavaScript", required: true)
+
+</html>
+
+

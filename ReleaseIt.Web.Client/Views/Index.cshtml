@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "ReleaseIt";
+}
+
+
+@*we render the page load script as razor template if we have other pages they can define their own load section*@
+@section PageLoadJavaScript {
+    <script>
+
+
+    //onload (page has been loaded)
+    $(function () {
+
+        //support cross site requests
+        jQuery.support.cors = true;
+
+        var logger = ReleaseIt.Controllers.LoggerController;
+        logger.writeLog("application onLoad event");
+
+        //set the main page layout
+        ReleaseIt.ViewModels.MainPageViewModel.init();
+
+        //TODO add history
+    });
+
+
+    </script>
+}
+
+
+This is the body

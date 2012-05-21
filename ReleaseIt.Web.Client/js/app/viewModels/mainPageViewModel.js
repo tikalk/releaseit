@@ -1,0 +1,29 @@
+﻿
+
+//create namespace if not exists
+var ReleaseIt = ReleaseIt || function () { };
+ReleaseIt.ViewModels = ReleaseIt.ViewModels || function () { };
+
+
+//create mainPageViewModel as module (for more info see: http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript)
+ReleaseIt.ViewModels.MainPageViewModel = (function () {
+
+    var privateVar = 0;
+
+    return {
+
+        init: function () {
+            ReleaseIt.Controllers.PageLayoutController.setLayout("main", "mainPageLayout");
+            ko.applyBindings(this /*our data context*/, $("#addReleaseFormTemplate_TemplateContainer").get(0));
+            ko.applyBindings(this /*our data context*/, $("#raeleasesListTemplate_TemplateContainer").get(0));
+        },
+
+        addReleaseItemClick: function () {
+            alert("add was click");
+        },
+
+        releaseItemTitleText: ko.observable("type something"),
+    };
+
+})();
+
