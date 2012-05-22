@@ -55,11 +55,17 @@ a:active, a:hover {
     margin:10px 0;
     width:560px;
 }
+#headdomain {
+    background:url(images/headcategorybg.png);
+    border:none;
+    height:30px;
+    width:100px;
+}
 #headcategory {
     background:url(images/headcategorybg.png);
     border:none;
     height:30px;
-    width:220px;
+    width:100px;
 }
 #headtitle {
     background:url(images/headtitlebg.png);

@@ -6,14 +6,15 @@
     <img id="headlogo" src="~/Content/site/images/headlogobg.png" alt="releaseit tech web releases aggrigator" />
     <div id="headslogan">add new release for the world to hear</div>
     <div id="headcategorytitle">
-        @Html.DropDownList("headcategory", EnumExtensions.GetSelectListItem<ReleaseDomainTypes>())
+        @Html.DropDownList("headdomain", EnumExtensions.GetSelectListItem<ReleaseDomainTypes>(), new Dictionary<string,object>{ {"data-bind", "value: domain"}})
+        @Html.DropDownList("headcategory", EnumExtensions.GetSelectListItem<ReleaseTypes>(), new Dictionary<string,object>{ {"data-bind", "value: category"}})
         <input id="headtitle" type="text" data-bind="value: title" />
     </div>
     <input id="headurl" type="text" data-bind="value: url" />
     <div id="headfooter">and press “release it”</div>
 </div>
 <div id="headright">
-    <div id="headabout"></div>
+    <textarea id="headabout" data-bind="value: content"></textarea>
     <input id="headsubmit" type="button" value="release it"  data-bind="click: addClick" /> <a id="headregister" href="#">register</a>
 </div>
 

@@ -16,7 +16,10 @@ ReleaseIt.ViewModels.AddReleaseFormViewModel = (function () {
         },
 
         title: ko.observable("type something"),
-        url: ko.observable("http:// your url goes here")
+        url: ko.observable("http:// your url goes here"),
+        content: ko.observable('content'),
+        domain: ko.observable('0'),
+        category: ko.observable('0')
     };
 
 })();
