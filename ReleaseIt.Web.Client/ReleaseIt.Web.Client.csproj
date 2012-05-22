@@ -231,6 +231,10 @@
       <Project>{5a59859c-2000-4af9-a5f1-ff85f61f7f4c}</Project>
       <Name>ReleaseIt.Web</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ReleaseIt\ReleaseIt.csproj">
+      <Project>{11977112-d9da-46a5-8216-8c7cde06c416}</Project>
+      <Name>ReleaseIt</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\PagesLayouts\_TopLayout.cshtml" />
