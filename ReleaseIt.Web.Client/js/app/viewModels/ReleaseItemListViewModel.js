@@ -22,20 +22,19 @@ ReleaseIt.ViewModels.ReleaseItemListViewModel = (function () {
 
     return {
 
-        releaseItems: ko.observableArray([
-            new releaseItem({
-                Title: 'item-1',
-                Body: 'some content',
-                CreateTime: '20/05/12',
-                Uri: 'http://google.com'
-            }),
-            new releaseItem({
-                Title: 'item-2',
-                Body: 'some more content',
-                CreateTime: '20/05/12',
-                Uri: 'http://google.com'
-            })
-        ])
+        releaseItems: ko.observableArray([]),
+
+        refresh: function () {
+            var This = this;
+            // do ajax
+            $.getJSON('Api/ReleaseItem', function (data, textStatus, jqXHR) {
+                var array = [];
+                $.each(data, function (index, item) {
+                    array.push(releaseItem(item));
+                });
+                This.releaseItems(array);
+            });
+        }
 
     };
 })();
