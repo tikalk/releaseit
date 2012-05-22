@@ -7,14 +7,14 @@
     <div id="headslogan">add new release for the world to hear</div>
     <div id="headcategorytitle">
         @Html.DropDownList("headcategory", EnumExtensions.GetSelectListItem<ReleaseDomainTypes>())
-        <input id="headtitle" type="text" value="your title goes here"  data-bind="value: releaseItemTitleText" />
+        <input id="headtitle" type="text" data-bind="value: title" />
     </div>
-    <input id="headurl" type="text" value="http:// your url goes here" />
+    <input id="headurl" type="text" data-bind="value: url" />
     <div id="headfooter">and press “release it”</div>
 </div>
 <div id="headright">
     <div id="headabout"></div>
-    <input id="headsubmit" type="button" value="release it"  data-bind="click: addReleaseItemClick" /> <a id="headregister" href="#">register</a>
+    <input id="headsubmit" type="button" value="release it"  data-bind="click: addClick" /> <a id="headregister" href="#">register</a>
 </div>
 
 </script>

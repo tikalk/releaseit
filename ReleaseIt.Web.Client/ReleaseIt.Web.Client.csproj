@@ -165,6 +165,7 @@
     <Content Include="Global.asax" />
     <Content Include="js\app\controllers\LoggerController.js" />
     <Content Include="js\app\controllers\PageLayoutController.js" />
+    <Content Include="js\app\viewModels\AddReleaseFormViewModel.js" />
     <Content Include="js\app\viewModels\mainPageViewModel.js" />
     <Content Include="Scripts\jquery-1.6.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.2.js" />
