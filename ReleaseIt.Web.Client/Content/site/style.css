@@ -143,11 +143,11 @@ a:active, a:hover {
 
 #main
 {
-    clear:both;
     padding:10px;
     background-color:#e6efff;
     border:1px solid #aec2e7;
-    height:auto;
+    overflow:hidden;
+    margin:40px 0;
     width:898px;
 }
 #mainLeft
@@ -159,4 +159,55 @@ a:active, a:hover {
 {
     float:right;
     width:270px;
+}
+#releasesList h1
+{
+    color:#2a4cb2;
+    font-size:1.4em;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+.releaseItem
+{
+    border:1px solid #aec2e7;
+    background-color:#fff;
+    padding:1px;
+    margin-bottom:10px;
+}
+.releaseItemTop
+{
+    background-image:url(images/itemheadbg.png);
+    border-bottom:1px solid #aec2e7;
+    height:27px;
+    line-height:27px;
+    padding:0 5px;
+}
+.releaseItemTopName
+{
+    color:#000;
+    float:left;
+    font-size:1.1em;
+    font-weight:bold;
+    text-decoration:underline;
+}
+.releaseItemTopAuthorDate
+{
+    color:#000;
+    float:right;
+    font-size:0.9em;
+}
+.releaseItemTopAuthor
+{
+    color:#2a4cb2;
+    font-size:1.2em;
+    font-weight:bold;
+    text-decoration:undeline;
+}
+.releaseItemTopDate
+{
+    font-weight:bold;
+}
+.releaseItemBody
+{
+    padding:10px;
 }
