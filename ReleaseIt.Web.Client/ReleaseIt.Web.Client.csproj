@@ -133,7 +133,6 @@
   <ItemGroup>
     <Compile Include="Controllers\API\ReleaseItemController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
-    <Compile Include="Controllers\API\DemoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
