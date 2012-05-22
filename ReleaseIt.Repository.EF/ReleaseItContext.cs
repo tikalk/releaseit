@@ -19,7 +19,10 @@ namespace ReleaseIt.Repository.EF
         {
             var seed = new ReleaseItContextInitializer();
             Database.SetInitializer(seed);
-            seed.InitializeDatabase(this);
+            seed.InitializeDatabase(this); 
+            this.Configuration.ProxyCreationEnabled = false;
+
+
         }
 
         #region Properties
