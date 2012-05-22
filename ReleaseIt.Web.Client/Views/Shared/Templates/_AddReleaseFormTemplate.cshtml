@@ -1,13 +1,12 @@
-﻿<script type="text/html" id="addReleaseFormTemplate">
+﻿@using ReleaseIt.Web;
+@using ReleaseIt.Repository.Entities;
+
+<script type="text/html" id="addReleaseFormTemplate">
 <div id="headleft">
     <img id="headlogo" src="~/Content/site/images/headlogobg.png" alt="releaseit tech web releases aggrigator" />
     <div id="headslogan">add new release for the world to hear</div>
     <div id="headcategorytitle">
-        <select id="headcategory">
-            <option>.NET</option>
-            <option>Sql Server</option>
-            <option>C#</option>
-        </select>
+        @Html.DropDownList("headcategory", EnumExtensions.GetSelectListItem<ReleaseDomainTypes>())
         <input id="headtitle" type="text" value="your title goes here"  data-bind="value: releaseItemTitleText" />
     </div>
     <input id="headurl" type="text" value="http:// your url goes here" />
