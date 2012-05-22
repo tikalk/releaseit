@@ -14,27 +14,38 @@ namespace ReleaseIt.Repository.EF.DataProviders
     {
         public ReleaseItem GetReleaseItem(int id)
         {
-            throw new NotImplementedException();
+            var context = new ReleaseItContext();
+            return context.ReleaseItems.Where(r => r.ID == id).FirstOrDefault();
         }
 
         public IEnumerable<ReleaseItem> GetReleaseItems(int pageIndex, int pageCount)
         {
-            throw new NotImplementedException();
+            var context = new ReleaseItContext();
+            return context.ReleaseItems.ToArray();
         }
 
         public void AddReleaseItem(ReleaseItem releaseItem)
         {
-            throw new NotImplementedException();
+            var context = new ReleaseItContext();
+            context.ReleaseItems.Add(releaseItem);
+
+            context.SaveChanges();
         }
 
         public void DeleteReleaseItem(int releaseItemID)
         {
-            throw new NotImplementedException();
+            var context = new ReleaseItContext();
+            //return context.ReleaseItems.Remove(releaseItemID
+
+            context.SaveChanges();
         }
 
         public void UpdateReleaseItem(ReleaseItem releaseItem)
         {
-            throw new NotImplementedException();
+            var context = new ReleaseItContext();
+            //context.ReleaseItems.Where(r => r.ID == id).FirstOrDefault();
+
+            context.SaveChanges();
         }
     }
 }
