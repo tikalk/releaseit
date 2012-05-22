@@ -17,10 +17,7 @@ namespace ReleaseIt.Repository.EF
     {
         static ReleaseItContext()
         {
-            var seed = new ReleaseItContextInitializer();
-            Database.SetInitializer(seed);
-           // seed.InitializeDatabase(this);
-            
+            Database.SetInitializer<ReleaseItContext>(new ReleaseItContextInitializer());
         }
 
         public ReleaseItContext()
