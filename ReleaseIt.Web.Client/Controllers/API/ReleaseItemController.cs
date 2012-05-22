@@ -22,7 +22,9 @@ namespace ReleaseIt.Web.Client.Controllers.API
         // GET /api/releaseitem
         public IEnumerable<ReleaseItem> Get()
         {
-            return _repository.GetReleaseItems(0, 1);
+            return _repository
+                .GetReleaseItems(0, 1)
+                .OrderByDescending(x => x.CreateTime);
         }
 
         // GET /api/releaseitem/5

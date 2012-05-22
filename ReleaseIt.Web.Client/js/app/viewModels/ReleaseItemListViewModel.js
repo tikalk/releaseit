@@ -10,7 +10,7 @@ ReleaseIt.ViewModels.ReleaseItemListViewModel = (function () {
             title: ko.observable(item.Title),
             uri: ko.observable(item.Uri),
             content: ko.observable(item.Body),
-            insertDate: ko.observable(item.CreateTime),
+            insertDate: ko.observable(item.CreateTimeString),
             author: ko.observable(item.author),
             domain: ko.observable(item.DomainType),
             category: ko.observable(item.ReleaseType),

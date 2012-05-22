@@ -34,16 +34,15 @@ namespace ReleaseIt.Repository.Entities
 
         public DateTime CreateTime { get; set; }
 
-        public long UCreateTime
+        public string CreateTimeString
         {
             get
             {
-                if (new DateTime() == CreateTime)
-                {
-                    return 0;
-                }
-
-                return CreateTime.ToFileTimeUtc();
+                return CreateTime.ToShortDateString();
+            }
+            set
+            {
+                // required for serealization
             }
         }
 
@@ -51,16 +50,15 @@ namespace ReleaseIt.Repository.Entities
 
         public virtual User User { get; set; }
 
-        public long UUpdateTime
+        public string UpdateTimeString
         {
             get
             {
-                if (new DateTime() == UpdateTime)
-                {
-                    return 0;
-                }
-
-                return UpdateTime.ToFileTimeUtc();
+                return UpdateTime.ToShortDateString();
+            }
+            set
+            {
+                // required for serealization
             }
         }
     }
