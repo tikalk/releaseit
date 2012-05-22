@@ -19,8 +19,9 @@
         <div id="header">
             @Html.Partial("_Header")
         </div>
-        <div id="main">s
-            @RenderBody()
+        <div id="main">
+            <div id="mainLeft">@RenderBody()</div>
+            <div id="mainRight"></div>
         </div>
     </div>
     <div id="footer">

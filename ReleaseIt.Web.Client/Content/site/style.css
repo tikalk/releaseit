@@ -140,3 +140,23 @@ a:active, a:hover {
     {
         font-weight:bold;
     }
+
+#main
+{
+    clear:both;
+    padding:10px;
+    background-color:#e6efff;
+    border:1px solid #aec2e7;
+    height:auto;
+    width:898px;
+}
+#mainLeft
+{
+    float:left;
+    width:600px;
+}
+#mainRight
+{
+    float:right;
+    width:270px;
+}
