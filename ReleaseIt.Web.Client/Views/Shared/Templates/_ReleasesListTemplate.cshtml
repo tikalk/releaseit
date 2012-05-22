@@ -2,34 +2,6 @@
     <div id="releasesList">
         <h1>Latest Releases</h1>
 
-        <div class="releaseItem">
-            <div class="releaseItemTop">
-                <div class="releaseItemTopName">SQL Server</div>
-                <div class="releaseItemTopAuthorDate">by <span class="releaseItemTopAuthor">James</span> on <span class="releaseItemTopDate">22/05/2012</span></div>
-            </div>
-            <div class="releaseItemBody">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elementum, ante vel molestie sollicitudin, est sem placerat quam, vel vestibulum velit dolor sed diam. Fusce congue adipiscing pellentesque. Curabitur orci leo, sodales vitae sagittis pharetra, luctus quis tellus. Curabitur facilisis ullamcorper nunc ac sodales. Donec sit amet massa justo, in suscipit magna. Sed congue urna vel metus faucibus facilisis sit amet a erat. Duis egestas odio ultricies eros luctus eu elementum lectus suscipit. Nullam auctor justo vitae nulla iaculis sed feugiat orci sodales ...
-            </div>
-        </div>
-
-        <div class="releaseItem">
-            <div class="releaseItemTop">
-                <div class="releaseItemTopName">SQL Server</div>
-                <div class="releaseItemTopAuthorDate">by <span class="releaseItemTopAuthor">James</span> on <span class="releaseItemTopDate">22/05/2012</span></div>
-            </div>
-            <div class="releaseItemBody">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elementum, ante vel molestie sollicitudin, est sem placerat quam, vel vestibulum velit dolor sed diam. Fusce congue adipiscing pellentesque. Curabitur orci leo, sodales vitae sagittis pharetra, luctus quis tellus. Curabitur facilisis ullamcorper nunc ac sodales. Donec sit amet massa justo, in suscipit magna. Sed congue urna vel metus faucibus facilisis sit amet a erat. Duis egestas odio ultricies eros luctus eu elementum lectus suscipit. Nullam auctor justo vitae nulla iaculis sed feugiat orci sodales ...
-            </div>
-        </div>
-
-        <div class="releaseItem">
-            <div class="releaseItemTop">
-                <div class="releaseItemTopName">SQL Server</div>
-                <div class="releaseItemTopAuthorDate">by <span class="releaseItemTopAuthor">James</span> on <span class="releaseItemTopDate">22/05/2012</span></div>
-            </div>
-            <div class="releaseItemBody">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elementum, ante vel molestie sollicitudin, est sem placerat quam, vel vestibulum velit dolor sed diam. Fusce congue adipiscing pellentesque. Curabitur orci leo, sodales vitae sagittis pharetra, luctus quis tellus. Curabitur facilisis ullamcorper nunc ac sodales. Donec sit amet massa justo, in suscipit magna. Sed congue urna vel metus faucibus facilisis sit amet a erat. Duis egestas odio ultricies eros luctus eu elementum lectus suscipit. Nullam auctor justo vitae nulla iaculis sed feugiat orci sodales ...
-            </div>
-        </div>
+        <div data-bind="template: {name:'releaseItemTemplate', foreach:releaseItems}"></div>
     </div>
 </script>

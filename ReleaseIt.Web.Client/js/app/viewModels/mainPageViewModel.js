@@ -20,7 +20,7 @@ ReleaseIt.ViewModels.MainPageViewModel = (function () {
 
             ko.applyBindings(this /*our data context*/, $("#topTemplate_TemplateContainer").get(0));
             ko.applyBindings(ReleaseIt.ViewModels.AddReleaseFormViewModel, $("#addReleaseFormTemplate_TemplateContainer").get(0));
-            ko.applyBindings(this /*our data context*/, $("#releasesTemplate_TemplateContainer").get(0));
+            ko.applyBindings(ReleaseIt.ViewModels.ReleaseItemListViewModel, $("#releasesListTemplate_TemplateContainer").get(0));
             //ko.applyBindings(this /*our data context*/, $("#raeleasesListTemplate_TemplateContainer").get(0));
         }
     };

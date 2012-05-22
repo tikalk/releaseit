@@ -132,8 +132,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\API\ReleaseItemController.cs" />
-    <Compile Include="Controllers\API\UsersController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Controllers\API\DemoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -167,6 +167,7 @@
     <Content Include="js\app\controllers\PageLayoutController.js" />
     <Content Include="js\app\viewModels\AddReleaseFormViewModel.js" />
     <Content Include="js\app\viewModels\mainPageViewModel.js" />
+    <Content Include="js\app\viewModels\ReleaseItemListViewModel.js" />
     <Content Include="Scripts\jquery-1.6.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.2.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js" />
@@ -238,6 +239,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\PagesLayouts\_TopLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Templates\_ReleaseItemTemplate.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
