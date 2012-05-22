@@ -1,0 +1,117 @@
+﻿* {
+    margin:0;
+    padding:0;
+}
+body {
+    background:url(images/bodybg.png) top repeat-x #cedaf1;
+    font-size:13px;
+    font-family:Arial;
+}
+a:link, a:visited {
+    color:#2a4cb2;
+    font-weight:bold;
+    text-decoration:none;
+}
+a:active, a:hover {
+    text-decoration:underline;
+}
+#wrapper {
+    height:auto;
+    margin:0 auto;
+    width:900px;
+}
+#top {
+    height:30px;
+    line-height:30px;
+    width:900px;   
+}
+#topmenu {
+    color:#2a4cb2;
+    font-weight:bold;
+    list-style:none;
+    float:right;
+    height:30px;
+    line-height:30px;
+}
+    #topmenu li {
+        display:inline;
+    }
+#header {
+    height:auto;
+    width:900px;
+}
+#headleft {
+    float:left;
+    width:560px;
+}
+#headslogan {
+    color:#2a4cb2;
+    font-size:2em;
+    font-weight:bold;
+    height:30px;
+    line-height:30px;
+}
+#headcategorytitle {
+    margin:10px 0;
+    width:560px;
+}
+#headcategory {
+    background:url(images/headcategorybg.png);
+    border:none;
+    height:30px;
+    float:left;
+    width:220px;
+}
+#headtitle {
+    background:url(images/headtitlebg.png);
+    border:none;
+    height:30px;
+    float:left;
+    margin-left:10px;
+    width:320px;
+}
+#headurl {
+    background:url(images/headurlbg.png);
+    border:none;
+    clear:both;
+    height:30px;
+    width:550px;
+}
+#headright {
+    float:right;
+    width:340px;
+}
+#headabout {
+    background-image:url(images/headaboutbg.png);
+    height:170px;
+    margin-bottom: 10px;
+    width:340px; 
+}
+#headsubmit {
+   background:url(images/headsubmit.png);
+   border:none;
+   color:#fff;
+   cursor:pointer;
+   font-size:1.1em;
+   font-weight:bold;
+   height:30px;
+   text-align:center;
+   margin-right:10px;
+   width:150px;
+}
+#headregister {
+    font-size:1.2em;
+}
+#footer {
+    background-color:#2a4cb2;
+    border-top:#fff 1px solid;
+    color:#fff;
+    font-size:0.85em;
+    font-weight:bold;
+    position:fixed;
+    bottom:0;
+    height:29px;
+    line-height:29px;
+    text-align:center;
+    width:100%;
+}

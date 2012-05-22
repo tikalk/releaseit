@@ -140,33 +140,28 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
-    <Content Include="Content\themes\base\jquery.ui.all.css" />
-    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
-    <Content Include="Content\themes\base\jquery.ui.base.css" />
-    <Content Include="Content\themes\base\jquery.ui.button.css" />
-    <Content Include="Content\themes\base\jquery.ui.core.css" />
-    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
-    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
-    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
-    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
-    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
-    <Content Include="Content\themes\base\jquery.ui.slider.css" />
-    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
-    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\jqueryui\images\ui-bg_diagonals-thick_15_0b3e6f_40x40.png" />
+    <Content Include="Content\jqueryui\images\ui-bg_dots-medium_30_0b58a2_4x4.png" />
+    <Content Include="Content\jqueryui\images\ui-bg_dots-small_20_333333_2x2.png" />
+    <Content Include="Content\jqueryui\images\ui-bg_dots-small_30_a32d00_2x2.png" />
+    <Content Include="Content\jqueryui\images\ui-bg_dots-small_40_00498f_2x2.png" />
+    <Content Include="Content\jqueryui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\jqueryui\images\ui-bg_flat_40_292929_40x100.png" />
+    <Content Include="Content\jqueryui\images\ui-bg_gloss-wave_20_111111_500x100.png" />
+    <Content Include="Content\jqueryui\images\ui-icons_00498f_256x240.png" />
+    <Content Include="Content\jqueryui\images\ui-icons_98d2fb_256x240.png" />
+    <Content Include="Content\jqueryui\images\ui-icons_9ccdfc_256x240.png" />
+    <Content Include="Content\jqueryui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\jqueryui\jquery-ui-1.8.20.custom.css" />
+    <Content Include="Content\site\images\bodybg.png" />
+    <Content Include="Content\site\images\headaboutbg.png" />
+    <Content Include="Content\site\images\headcategorybg.png" />
+    <Content Include="Content\site\images\headlogobg.png" />
+    <Content Include="Content\site\images\headsubmit.png" />
+    <Content Include="Content\site\images\headtitlebg.png" />
+    <Content Include="Content\site\images\headurlbg.png" />
+    <Content Include="Content\site\images\itemheadbg.png" />
+    <Content Include="Content\site\style.css" />
     <Content Include="Global.asax" />
     <Content Include="js\app\controllers\LoggerController.js" />
     <Content Include="js\app\controllers\PageLayoutController.js" />
@@ -194,14 +189,13 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\images\" />
+    <Content Include="Views\Shared\Templates\_TopTemplate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -236,6 +230,9 @@
       <Project>{5a59859c-2000-4af9-a5f1-ff85f61f7f4c}</Project>
       <Name>ReleaseIt.Web</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\PagesLayouts\_TopLayout.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

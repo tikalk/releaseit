@@ -21,6 +21,23 @@
         ReleaseIt.ViewModels.MainPageViewModel.init();
 
         //TODO add history
+
+        // UI
+        $("#topregister").click(function () {
+            $("#dialog-register").dialog({
+                height: 200,
+                width: 300,
+                modal: true
+            });
+        });
+
+        $("#toplogin").click(function () {
+            $("#dialog-login").dialog({
+                height: 200,
+                width: 300,
+                modal: true
+            });
+        });
     });
 
 

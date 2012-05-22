@@ -13,6 +13,9 @@ ReleaseIt.ViewModels.MainPageViewModel = (function () {
     return {
 
         init: function () {
+            ReleaseIt.Controllers.PageLayoutController.setLayout("top", "topLayout");
+            ko.applyBindings(this /*our data context*/, $("#topTemplate_TemplateContainer").get(0));
+
             ReleaseIt.Controllers.PageLayoutController.setLayout("main", "mainPageLayout");
             ko.applyBindings(this /*our data context*/, $("#addReleaseFormTemplate_TemplateContainer").get(0));
             ko.applyBindings(this /*our data context*/, $("#raeleasesListTemplate_TemplateContainer").get(0));
