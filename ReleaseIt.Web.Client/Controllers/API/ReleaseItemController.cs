@@ -13,10 +13,10 @@ namespace ReleaseIt.Web.Client.Controllers.API
     {
         private IReleaseItemRepository _repository;
 
-        [ImportingConstructor]
-        public ReleaseItemController(IReleaseItemRepository repository)
+        //[ImportingConstructor]
+        public ReleaseItemController()
         {
-            _repository = repository;
+            _repository = ReleaseIt.Composition.MefContainer.Container.GetExportedValue<IReleaseItemRepository>();
         }
 
         // GET /api/releaseitem
