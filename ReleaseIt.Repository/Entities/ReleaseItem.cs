@@ -32,10 +32,26 @@ namespace ReleaseIt.Repository.Entities
         [MaxLength(256)]
         public string Uri { get; set; }
 
-        public DateTime? CreateTime { get; set; }
+        public DateTime CreateTime { get; set; }
 
-        public DateTime? UpdateTime { get; set; }
+        public long UCreateTime
+        {
+            get
+            {
+                return CreateTime.ToFileTimeUtc();
+            }
+        }
+
+        public DateTime UpdateTime { get; set; }
 
         public virtual User User { get; set; }
+
+        public long UUpdateTime
+        {
+            get
+            {
+                return UpdateTime.ToFileTimeUtc();
+            }
+        }
     }
 }

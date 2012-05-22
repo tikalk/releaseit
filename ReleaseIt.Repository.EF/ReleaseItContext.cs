@@ -15,13 +15,18 @@ namespace ReleaseIt.Repository.EF
     [Export(typeof(IReleaseItContext))]
     public class ReleaseItContext : DbContext, IReleaseItContext
     {
-        public ReleaseItContext()
+        static ReleaseItContext()
         {
             var seed = new ReleaseItContextInitializer();
             Database.SetInitializer(seed);
-            seed.InitializeDatabase(this); 
-            this.Configuration.ProxyCreationEnabled = false;
+           // seed.InitializeDatabase(this);
+            
+        }
 
+        public ReleaseItContext()
+        {
+
+            Configuration.ProxyCreationEnabled = false;
 
         }
 
