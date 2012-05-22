@@ -4,6 +4,7 @@ using System.ComponentModel.Composition;
 using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
+using ReleaseIt.Composition;
 using ReleaseIt.Repository.Contracts;
 using ReleaseIt.Repository.Entities;
 
@@ -13,10 +14,9 @@ namespace ReleaseIt.Web.Client.Controllers.API
     {
         private IReleaseItemRepository _repository;
 
-        //[ImportingConstructor]
         public ReleaseItemController()
         {
-            _repository = ReleaseIt.Composition.MefContainer.Container.GetExportedValue<IReleaseItemRepository>();
+            _repository = MefContainer.Container.GetExportedValue<IReleaseItemRepository>();
         }
 
         // GET /api/releaseitem

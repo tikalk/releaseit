@@ -32,15 +32,14 @@ namespace ReleaseIt.Repository.EF.DataProviders
 
             var context = new ReleaseItContext();
             context.ReleaseItems.Add(item);
-
             context.SaveChanges();
         }
 
         public void DeleteReleaseItem(int releaseItemID)
         {
             var context = new ReleaseItContext();
-            //return context.ReleaseItems.Remove(releaseItemID
-
+            var item = context.ReleaseItems.Where(r => r.ID == releaseItemID).FirstOrDefault();
+            context.ReleaseItems.Remove(item);
             context.SaveChanges();
         }
 

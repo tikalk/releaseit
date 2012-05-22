@@ -132,6 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\API\ReleaseItemController.cs" />
+    <Compile Include="Controllers\API\UsersController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
