@@ -21,7 +21,11 @@ ReleaseIt.ViewModels.AddReleaseFormViewModel = (function () {
                     Body: this.content()
                 },
                 type: 'PUT',
-                dataType: 'json'
+                dataType: 'json',
+                success: function (data, textStatus, jqXHR) {
+                    alert('The new release item has been aded');
+                    ReleaseIt.ViewModels.ReleaseItemListViewModel.refresh();
+                }
             });
 
         },
