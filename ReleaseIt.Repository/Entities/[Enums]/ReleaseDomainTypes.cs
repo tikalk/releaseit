@@ -8,9 +8,9 @@ namespace ReleaseIt.Repository.Entities
 {
     public enum ReleaseDomainTypes
     {
-        None,
-        DotNet,
-        Java,
-        Rubby,
+        NotSet = 0,
+        DotNet = 1,
+        Java = 2,
+        Rubby = 3,
     }
 }
