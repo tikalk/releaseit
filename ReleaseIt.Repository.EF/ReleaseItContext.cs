@@ -54,7 +54,9 @@ namespace ReleaseIt.Repository.EF
                     Body = "test item body",
                     DomainType = ReleaseDomainTypes.DotNet,
                     ReleaseType = ReleaseTypes.BetaProduct,
-                    Uri = "no uri "
+                    Uri = "no uri ",
+                    CreateTime = DateTime.Now,
+                    UpdateTime = DateTime.Now,
                 });
         }
     }

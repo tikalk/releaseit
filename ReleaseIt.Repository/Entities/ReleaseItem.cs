@@ -38,6 +38,11 @@ namespace ReleaseIt.Repository.Entities
         {
             get
             {
+                if (new DateTime() == CreateTime)
+                {
+                    return 0;
+                }
+
                 return CreateTime.ToFileTimeUtc();
             }
         }
@@ -50,6 +55,11 @@ namespace ReleaseIt.Repository.Entities
         {
             get
             {
+                if (new DateTime() == UpdateTime)
+                {
+                    return 0;
+                }
+
                 return UpdateTime.ToFileTimeUtc();
             }
         }
