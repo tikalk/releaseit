@@ -14,18 +14,13 @@ ReleaseIt.ViewModels.MainPageViewModel = (function () {
 
         init: function () {
             ReleaseIt.Controllers.PageLayoutController.setLayout("top", "topLayout");
-            ko.applyBindings(this /*our data context*/, $("#topTemplate_TemplateContainer").get(0));
-
             ReleaseIt.Controllers.PageLayoutController.setLayout("mainLeft", "mainPageLayout");
-            ko.applyBindings(this /*our data context*/, $("#addReleaseFormTemplate_TemplateContainer").get(0));
+            ReleaseIt.Controllers.PageLayoutController.setLayout("head", "mainPageLayout");
+
+            ko.applyBindings(this /*our data context*/, $("#topTemplate_TemplateContainer").get(0));
+            ko.applyBindings(ReleaseIt.ViewModels.AddReleaseFormViewModel, $("#addReleaseFormTemplate_TemplateContainer").get(0));
             ko.applyBindings(this /*our data context*/, $("#raeleasesListTemplate_TemplateContainer").get(0));
-        },
-
-        addReleaseItemClick: function () {
-            alert("add was click");
-        },
-
-        releaseItemTitleText: ko.observable("type something"),
+        }
     };
 
 })();

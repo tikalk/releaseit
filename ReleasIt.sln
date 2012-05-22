@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 11
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReleaseIt.Web.Client", "ReleaseIt.Web.Client\ReleaseIt.Web.Client.csproj", "{59E5470B-F039-4B8C-AB53-401AA5FA3B4B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReleaseIt.Repository", "ReleaseIt.Repository\ReleaseIt.Repository.csproj", "{27674BBB-4306-46A3-9446-FA42B6D82854}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReleaseIt.Repository.EF", "ReleaseIt.Repository.EF\ReleaseIt.Repository.EF.csproj", "{413A615D-9CA1-4835-8A58-74707584E0C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReleaseIt.Web", "ReleaseIt.Web\ReleaseIt.Web.csproj", "{5A59859C-2000-4AF9-A5F1-FF85F61F7F4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReleaseIt.Web.Client", "ReleaseIt.Web.Client\ReleaseIt.Web.Client.csproj", "{59E5470B-F039-4B8C-AB53-401AA5FA3B4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
