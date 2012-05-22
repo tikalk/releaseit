@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,10 +25,13 @@ namespace ReleaseIt.Repository.EF.DataProviders
             return context.ReleaseItems.ToArray();
         }
 
-        public void AddReleaseItem(ReleaseItem releaseItem)
+        public void AddReleaseItem(ReleaseItem item)
         {
+            item.CreateTime = DateTime.Now;
+            item.UpdateTime = DateTime.Now;
+
             var context = new ReleaseItContext();
-            context.ReleaseItems.Add(releaseItem);
+            context.ReleaseItems.Add(item);
 
             context.SaveChanges();
         }
@@ -40,11 +44,12 @@ namespace ReleaseIt.Repository.EF.DataProviders
             context.SaveChanges();
         }
 
-        public void UpdateReleaseItem(ReleaseItem releaseItem)
+        public void UpdateReleaseItem(ReleaseItem item)
         {
             var context = new ReleaseItContext();
-            //context.ReleaseItems.Where(r => r.ID == id).FirstOrDefault();
 
+            context.ReleaseItems.Attach(item);
+            context.ChangeTracker.DetectChanges();
             context.SaveChanges();
         }
     }

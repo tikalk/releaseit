@@ -32,10 +32,9 @@ namespace ReleaseIt.Repository.Entities
         [MaxLength(256)]
         public string Uri { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public DateTime CreateTime { get; set; }
+        public DateTime? CreateTime { get; set; }
 
-        public DateTime UpdateTime { get; set; }
+        public DateTime? UpdateTime { get; set; }
 
         public virtual User User { get; set; }
     }

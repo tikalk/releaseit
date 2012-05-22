@@ -32,15 +32,15 @@ namespace ReleaseIt.Web.Client.Controllers.API
         }
 
         // POST /api/releaseitem
-        public void Post(string value)
+        public void Post(ReleaseItem item)
         {
-            //return _repository.UpdateReleaseItem(id);
+            _repository.UpdateReleaseItem(item);
         }
 
         // PUT /api/releaseitem/5
         public void Put(ReleaseItem item)
         {
-            //_repository.AddReleaseItem(item);
+            _repository.AddReleaseItem(item);
         }
 
         // DELETE /api/releaseitem/5
