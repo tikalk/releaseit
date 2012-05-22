@@ -11,7 +11,18 @@ ReleaseIt.ViewModels.AddReleaseFormViewModel = (function () {
             var title = this.title();
             var url = this.url();
 
-            alert(title + '\n' + url);
+            $.ajax({
+                url: "Api/ReleaseItem",
+                data: {
+                    Title: this.title(),
+                    Uri: this.url(),
+                    DomainType: this.domain(),
+                    ReleaseType: this.category(),
+                    Body: this.content()
+                },
+                type: 'PUT',
+                dataType: 'json'
+            });
 
         },
 

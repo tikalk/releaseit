@@ -40,7 +40,7 @@ namespace ReleaseIt.Web.Client.Controllers.API
         // PUT /api/releaseitem/5
         public void Put(ReleaseItem item)
         {
-            _repository.AddReleaseItem(item);
+            //_repository.AddReleaseItem(item);
         }
 
         // DELETE /api/releaseitem/5
