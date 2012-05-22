@@ -11,6 +11,8 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using ReleaseIt.Composition;
+using ReleaseIt.Repository.Contracts;
 using ReleaseIt.Web.MVC.Bundling;
 
 namespace ReleaseIt.Web.Client
@@ -66,8 +68,11 @@ namespace ReleaseIt.Web.Client
         {
             //TODO change the path to more secure way
             var catalog = new AggregateCatalog(new DirectoryCatalog(Server.MapPath(".") + @"\bin"), new AssemblyCatalog(Assembly.GetExecutingAssembly()));
-            var container = new CompositionContainer(catalog);
-            var rep = container.GetExportedValue<ReleaseIt.Repository.Contracts.IReleaseItemRepository>();
+            MefContainer.Container = new CompositionContainer(catalog);
+
+            //get the object context
+            var rep = MefContainer.Container.GetExportedValue<IReleaseItContext>();
+         
         }        
     }
 }

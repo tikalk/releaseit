@@ -8,8 +8,9 @@ namespace ReleaseIt.Repository.Entities
 {
     public enum ReleaseTypes
     {
-        Product,
-        BetaProduct,
-        Trend,
+        NotSet = 0,
+        Product = 1,
+        BetaProduct = 2,
+        Trend = 3,
     }
 }

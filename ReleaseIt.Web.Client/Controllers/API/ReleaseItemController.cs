@@ -5,42 +5,48 @@ using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
 using ReleaseIt.Repository.Contracts;
+using ReleaseIt.Repository.Entities;
 
 namespace ReleaseIt.Web.Client.Controllers.API
 {
     public class ReleaseItemController : ApiController
     {
+        private IReleaseItemRepository _repository;
+
         [ImportingConstructor]
         public ReleaseItemController(IReleaseItemRepository repository)
         {
-
+            _repository = repository;
         }
 
         // GET /api/releaseitem
-        public IEnumerable<string> Get()
+        public IEnumerable<ReleaseItem> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _repository.GetReleaseItems(0, 1);
         }
 
         // GET /api/releaseitem/5
-        public string Get(int id)
+        public ReleaseItem Get(int id)
         {
-            return "value";
+            return _repository.GetReleaseItem(id);
         }
 
         // POST /api/releaseitem
         public void Post(string value)
         {
+            //return _repository.UpdateReleaseItem(id);
         }
 
         // PUT /api/releaseitem/5
-        public void Put(int id, string value)
+        public void Put(ReleaseItem item)
         {
+            _repository.AddReleaseItem(item);
         }
 
         // DELETE /api/releaseitem/5
         public void Delete(int id)
         {
+            _repository.DeleteReleaseItem(id);
         }
     }
 }

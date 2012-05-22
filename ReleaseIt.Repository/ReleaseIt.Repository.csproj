@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IReleaseItemRepository.cs" />
+    <Compile Include="Contracts\IReleaseItContext.cs" />
     <Compile Include="Contracts\IUsersRepository.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\[Enums]\ReleaseDomainTypes.cs" />
